@@ -36,4 +36,4 @@ Compose, Material 3 и официальный Shizuku API/provider 13.1.5. Ко�
 Официальные источники: [Shizuku API](https://github.com/RikkaApps/Shizuku-API), [настройка Shizuku](https://shizuku.rikka.app/guide/setup/).
 
 
-Релиз и исходники: [FPS+ на GitHub](https://github.com/Floppaputhon/FPS-plus).
+Релиз и исходники: [FPS+ на GitHub](https://github.com/Floppaputhon/FPS-plus). [Скачать релизный APK 1.0](https://github.com/Floppaputhon/FPS-plus/raw/refs/heads/main/dist/FPS-plus-1.0-release.apk).

@@ -2,7 +2,7 @@
 
 FPS+ is an Android app that uses [Shizuku](https://shizuku.rikka.app/) with ADB Shell privileges to request REDMAGIC frame-generation support for games. No root, PC connection, ads, analytics or network permission is required by the app. It is an independent project and is not affiliated with REDMAGIC, nubia or Shizuku.
 
-[Русская инструкция](README.ru.md) · [Download the release](https://github.com/Floppaputhon/FPS-plus/releases/latest)
+[Русская инструкция](README.ru.md) · [Download FPS+ 1.0 APK](https://github.com/Floppaputhon/FPS-plus/raw/refs/heads/main/dist/FPS-plus-1.0-release.apk)
 
 ## What it does
 
@@ -16,7 +16,7 @@ A user reported that the command worked on a REDMAGIC 11S Pro (nubia NX809J, RED
 
 ## Setup
 
-1. Install the signed APK from [Releases](https://github.com/Floppaputhon/FPS-plus/releases/latest) and install [Shizuku from its official site](https://shizuku.rikka.app/download/).
+1. Install the signed APK from [the signed release APK](https://github.com/Floppaputhon/FPS-plus/raw/refs/heads/main/dist/FPS-plus-1.0-release.apk) and install [Shizuku from its official site](https://shizuku.rikka.app/download/).
 2. Enable Android developer options and wireless debugging. Pair and start Shizuku using its [official guide](https://shizuku.rikka.app/guide/setup/). On Android 11 and later this can be done without a PC. Without root, Shizuku usually has to be started again after reboot.
 3. Open FPS+, select a language and grant Shizuku access. Shizuku must run as ADB Shell (UID 2000). If permission was denied permanently, allow the app from Shizuku settings.
 4. Enable the system unlock, wait for the read-back result, and follow the in-app guide to configure the REDMAGIC gaming panel. Check the actual result in the game yourself.
