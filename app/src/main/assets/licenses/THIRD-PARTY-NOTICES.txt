@@ -1,0 +1,14 @@
+FPS+ uses third-party components under their own licenses.
+
+Shizuku API and provider 13.1.5
+Copyright (c) 2021 RikkaW
+MIT License; see SHIZUKU-MIT.txt.
+Source: https://github.com/RikkaApps/Shizuku-API
+
+AndroidX and Jetpack Compose libraries, Kotlin standard library and coroutines,
+and other Apache-licensed dependencies are distributed under the Apache License,
+Version 2.0; see APACHE-2.0.txt. Individual components may contain additional
+notices in the APK META-INF directory and their published source distributions.
+
+FPS+ source code and original artwork are licensed under GNU GPL version 3 only;
+see GPL-3.0.txt and the project repository for the complete corresponding source.

@@ -79,14 +79,25 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        widgetAction = isWidgetIntent(intent)
+        val requestedByWidget = consumeWidgetIntent(intent)
+        // A recreated activity must not replay the previous widget tap.
+        widgetAction = savedInstanceState == null && requestedByWidget
         Shizuku.addBinderReceivedListenerSticky(received)
         Shizuku.addBinderDeadListener(dead)
         Shizuku.addRequestPermissionResultListener(permissionResult)
         setContent { Screen() }
     }
-    override fun onNewIntent(intent: Intent) { super.onNewIntent(intent); setIntent(intent); widgetAction = isWidgetIntent(intent); refresh() }
+    override fun onNewIntent(intent: Intent) { super.onNewIntent(intent); setIntent(intent); widgetAction = consumeWidgetIntent(intent); refresh() }
     private fun isWidgetIntent(intent: Intent?): Boolean = intent?.action == "com.redmagic.fps.WIDGET_TOGGLE" && intent.getStringExtra("token")?.let { it == prefs.getString("widget_token", null) } == true
+    private fun consumeWidgetIntent(intent: Intent?): Boolean {
+        val requested = isWidgetIntent(intent)
+        if (intent?.action == "com.redmagic.fps.WIDGET_TOGGLE") {
+            intent.action = Intent.ACTION_MAIN
+            intent.removeExtra("token")
+            setIntent(intent)
+        }
+        return requested
+    }
     override fun onResume() { super.onResume(); resumeVersion++; updateConnection(); refresh() }
     override fun onDestroy() {
         Shizuku.removeBinderReceivedListener(received); Shizuku.removeBinderDeadListener(dead); Shizuku.removeRequestPermissionResultListener(permissionResult)

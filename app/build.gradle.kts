@@ -8,7 +8,7 @@ android {
     namespace = "com.redmagic.fps"
     compileSdk = 36
     buildToolsVersion = "36.0.0"
-    defaultConfig { applicationId = "com.redmagic.fps"; minSdk = 26; targetSdk = 36; versionCode = 7; versionName = "1.0" }
+    defaultConfig { applicationId = "com.redmagic.fps"; minSdk = 26; targetSdk = 36; versionCode = 8; versionName = "1.0.1" }
     buildFeatures { compose = true; aidl = true; buildConfig = true }
     val releaseStore = providers.environmentVariable("FPSPLUS_KEYSTORE").orNull
     val releasePassword = providers.environmentVariable("FPSPLUS_KEY_PASSWORD").orNull

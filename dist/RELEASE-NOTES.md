@@ -11,3 +11,5 @@ A user reported that the underlying command worked on a REDMAGIC 11S Pro with RE
 **Installation:** install and start [Shizuku](https://shizuku.rikka.app/download/) with wireless debugging, then grant FPS+ access. This release uses a different signing key from the 1.4 debug APK. Android cannot update directly from the debug APK; uninstalling it removes its locally stored settings and game marks.
 
 The SHA-256 checksum is provided in `FPS-plus-1.0-SHA256SUMS.txt`.
+
+**Update:** Version 1.0.1 fixes a possible repeat widget action after the activity is recreated. Please use the current APK linked in the repository README.
